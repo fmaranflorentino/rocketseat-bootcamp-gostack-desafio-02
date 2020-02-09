@@ -6,6 +6,11 @@ import userEmailMiddleware from './app/middlewares/user/userEmail';
 
 const routes = new Router();
 
-routes.post('/users', userBodyMiddleware, userEmailMiddleware, UserController.store);
+routes.post(
+  '/users',
+  userBodyMiddleware,
+  userEmailMiddleware,
+  UserController.store
+);
 
 export default routes;
