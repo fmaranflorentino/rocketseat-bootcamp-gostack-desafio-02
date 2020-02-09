@@ -15,5 +15,5 @@ export default async (req, res, next) => {
     return res.status(400).json({ error: 'Body schema is wrong' });
   }
 
-  next();
+  return next();
 };
