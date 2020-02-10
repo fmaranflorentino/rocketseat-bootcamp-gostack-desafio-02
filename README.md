@@ -31,4 +31,50 @@
 
 <p>Agora você já pode testar o desafio.</p>
 
+### 1.Utilizando a rota de cadastro de usuários:
+
+<p>Para efetuar a cadastro de um usuário, bata na seguinte rotas passando o body abaixo:</p>
+
+- `POST - http://localhost:4200/users`;
+
+```js
+{
+	"name": "Flávio Maran Florentino",
+	"email": "flavio@hotmail.com",
+	"password": "09812345"
+}
+```
+
+### 2.Realizando o login:
+
+<p>Para efetuar o login de um usuário, bata na seguinte rota passando o body abaixo:</p>
+
+- `POST - http://localhost:4200/sessions`
+
+```js
+{
+	"email": "flavio@hotmail.com",
+	"password": "09812345"
+}
+```
+
+### 3.Criando um destinatário:
+
+<p>Para criar um destinatário, bata na seguinte rota passando o body abaixo:</p>
+
+- `POST - http://localhost:4200/recipients`
+
+```js
+{
+	"name": "Fláio - house",
+	"street": "castro alves",
+	"number": 15,
+	"complement": "valderi",
+	"state": "SP",
+	"city": "São Caetano do Sul",
+	"postalCode": "04790030"
+}
+```
+
+
 <p>Link do desafio: <a href="#rocket-sobre-o-desafio" target="_blank">Visualizar o desafio</a></p>
