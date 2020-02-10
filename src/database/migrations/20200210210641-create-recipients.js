@@ -33,7 +33,7 @@ module.exports = {
         type: Sequelize.STRING,
         allowNul: false,
       },
-      postalCode: {
+      postal_code: {
         type: Sequelize.STRING,
         allowNul: false,
       },
