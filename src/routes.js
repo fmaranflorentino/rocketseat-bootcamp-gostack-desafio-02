@@ -6,7 +6,8 @@ import RecipientsController from './app/controllers/RecipientsController';
 
 import { userValidateBody, userValidateEmail } from './app/middlewares/user';
 import {
-  recipientValidateBody,
+  recipientValidateUpdateBody,
+  recipientValidateCreateBody,
   recipientExistsValidate,
 } from './app/middlewares/recipient/recipient';
 
@@ -32,10 +33,15 @@ routes.post(
   sessionValidatePassword,
   SessionController.store
 );
-routes.post('/recipients', sessionAuthorization, RecipientsController.store);
+routes.post(
+  '/recipients',
+  recipientValidateCreateBody,
+  sessionAuthorization,
+  RecipientsController.store
+);
 routes.put(
   '/recipients',
-  recipientValidateBody,
+  recipientValidateUpdateBody,
   recipientExistsValidate,
   sessionAuthorization,
   RecipientsController.update

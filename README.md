@@ -76,5 +76,23 @@
 }
 ```
 
+### .Alterando um destinatário:
+
+<p>Para alterar um destinatário, bata na seguinte rota passando o body abaixo:</p>
+
+- `PUT - http://localhost:4200/recipients`
+
+```js
+{
+	"id": 1,
+	"name": "Flávio editado",
+	"street": "castro alves",
+	"number": 15,
+	"complement": "valderi",
+	"state": "SP",
+	"city": "São Caetano do Sul",
+	"postalCode": "04790030"
+}
+```
 
 <p>Link do desafio: <a href="#rocket-sobre-o-desafio" target="_blank">Visualizar o desafio</a></p>
