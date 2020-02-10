@@ -2,17 +2,31 @@ import { Router } from 'express';
 import UserController from './app/controllers/UserController';
 import SessionController from './app/controllers/SessionController';
 
-import userBodyMiddleware from './app/middlewares/user/userBody';
-import userEmailMiddleware from './app/middlewares/user/userEmail';
+import {
+  userValidateBody,
+  userValidateEmail,
+} from './app/middlewares/user/user';
+
+import {
+  sessionValidateBody,
+  sessionValidateUser,
+  sessionValidatePassword,
+} from './app/middlewares/auth/authorization';
 
 const routes = new Router();
 
 routes.post(
   '/users',
-  userBodyMiddleware,
-  userEmailMiddleware,
+  userValidateBody,
+  userValidateEmail,
   UserController.store
 );
-routes.post('/sessions', SessionController.store);
+routes.post(
+  '/sessions',
+  sessionValidateBody,
+  sessionValidateUser,
+  sessionValidatePassword,
+  SessionController.store
+);
 
 export default routes;
