@@ -76,7 +76,7 @@
 }
 ```
 
-### .Alterando um destinatário:
+### 4.Alterando um destinatário:
 
 <p>Para alterar um destinatário, bata na seguinte rota passando o body abaixo:</p>
 
