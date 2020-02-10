@@ -27,7 +27,7 @@
 - `yarn run:migrations`
 - `yarn dev`
 
-<p>Agora a aplicação deve estar rodando normalmente na port :4200.</p>
+<p>Agora a aplicação deve estar rodando normalmente na porta :4200.</p>
 
 <p>Agora você já pode testar o desafio.</p>
 
