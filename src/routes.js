@@ -2,16 +2,13 @@ import { Router } from 'express';
 import UserController from './app/controllers/UserController';
 import SessionController from './app/controllers/SessionController';
 
-import {
-  userValidateBody,
-  userValidateEmail,
-} from './app/middlewares/user/user';
+import { userValidateBody, userValidateEmail } from './app/middlewares/user';
 
 import {
   sessionValidateBody,
   sessionValidateUser,
   sessionValidatePassword,
-} from './app/middlewares/auth/authorization';
+} from './app/middlewares/auth';
 
 const routes = new Router();
 
